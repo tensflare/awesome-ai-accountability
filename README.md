@@ -50,6 +50,7 @@ Your contributions are welcome. See the [contribution guidelines](CONTRIBUTING.m
 - [Council of Europe Framework Convention on AI](https://www.coe.int/en/web/artificial-intelligence/the-framework-convention-on-artificial-intelligence) - First international legally binding treaty on AI, ensuring consistency with human rights, democracy, and the rule of law.
 - [Deon — Ethics Checklist for Data Science](https://deon.drivendata.org) - Lightweight command-line tool and checklist prompting ethical reflection across the data science project lifecycle.
 - [Data Nutrition Project](https://datanutrition.org) - Methodology and labeling system for datasets inspired by nutrition labels, making quality, provenance, and biases visible at a glance.
+- [TAP (Tensflare Accountability Protocol)](https://github.com/tensflare/tap) - Open protocol for cryptographically verifiable agent mandate encoding, action recording, and cross-boundary chain of custody.
 
 ## Regulations & Policy
 
@@ -193,6 +194,7 @@ Your contributions are welcome. See the [contribution guidelines](CONTRIBUTING.m
 - [Microsoft Agent Governance Toolkit](https://github.com/microsoft/agent-governance-toolkit) - Open-source runtime security, compliance, and SRE for AI agents.
 - [Open Policy Agent (OPA)](https://github.com/open-policy-agent/opa) - Policy engine for fine-grained access control, adaptable for AI governance rules.
 - [Bifrost (Maxim AI)](https://github.com/maximai/bifrost) - Open-source AI gateway for access control, cost tracking, and compliance logging.
+- [LegalVerify](https://github.com/tensflare/verify) - Citation verification tool that checks whether legal citations exist and are still good law; CLI, API, MCP server, and web UI.
 
 ### Dataset Documentation
 
@@ -252,6 +254,7 @@ Your contributions are welcome. See the [contribution guidelines](CONTRIBUTING.m
 
 - [IETF VAP/LAP Framework](https://datatracker.ietf.org/doc/draft-ailex-vap-legal-ai-provenance/) - Yamakawa et al. (2026) specify cryptographically verifiable decision audit trails for high-risk AI systems.
 - [VAP Architectural Framework](https://datatracker.ietf.org/doc/draft-kamimura-vap-framework-00/) - Kamimura (2026) proposes tamper-evident audit trails using SCITT, RATS, and COSE building blocks.
+- [Accountability Chains: A Formal Specification for AI Agent Delegation](https://doi.org/10.14293/PR2199.004019.v1) - Arop (2026) defines five structural invariants for mandate-preserving accountability chains and shows they are realizable in verifiable delegation protocols.
 
 ### Recent Surveys (2023-2026)
 
@@ -309,7 +312,7 @@ Your contributions are welcome. See the [contribution guidelines](CONTRIBUTING.m
 ### Incident Databases
 
 - [AI Incident Database](https://incidentdatabase.ai) - Curated repository of real-world harms caused by AI systems (Partnership on AI / Responsible AI Collaborative).
-- [HalluCase](https://github.com/tensflare/hallucase) - Registry of AI hallucination incidents in legal contexts with sanctions and remediation data.
+- [HalluCase](https://github.com/tensflare/hallucase) - CVE-style registry of AI hallucination incidents in legal contexts tracking sanctions, severity, and remediation.
 - [AIAAIC](https://www.aiaaic.org) - AI, Algorithmic, and Automation Incidents and Controversies repository.
 
 ### Evaluation Benchmarks
@@ -366,6 +369,10 @@ Your contributions are welcome. See the [contribution guidelines](CONTRIBUTING.m
 - [Apollo Research](https://apolloresearch.ai) - Detecting AI deception and loss-of-control threats through white-box evaluations.
 - [Palisade Research](https://palisaderesearch.org) - Nonprofit empirical research on AI shutdown resistance and misalignment.
 
+### Trust Infrastructure & Accountability
+
+- [Truss](https://github.com/tensflare/truss-api) - Open trust infrastructure platform for agentic AI with Ed25519 signing, action recording, and evidence chains; SDKs for LangGraph, AutoGen, CrewAI, LlamaIndex, OpenAI, Semantic Kernel, and MCP.
+
 ### Adversarial Testing & Security
 
 - [Robust Intelligence](https://robustintelligence.com) - AI Firewall and algorithmic red teaming combining adversarial testing with runtime defense (acquired by Cisco).
@@ -377,6 +384,7 @@ Your contributions are welcome. See the [contribution guidelines](CONTRIBUTING.m
 ### Legal AI & Compliance
 
 - [Tensflare](https://tensflare.com) - Trust infrastructure for legal AI: citation verification, hallucination registries, and jurisdiction-aware tools.
+- [Docfide](https://www.docfide.com) - Multi-agent contract intelligence platform for drafting, reviewing, negotiating, and managing contracts.
 - [LegalOn](https://legalon.com) - AI contract review with 50+ AI playbooks across a 7-product suite.
 - [Luminance](https://luminance.com) - Legal-grade AI for contract lifecycle management using mixture-of-experts approach.
 - [Robin AI](https://robinai.com) - AI-powered legal intelligence for contract review, analysis, and obligation management.
@@ -477,6 +485,6 @@ Your contributions are welcome. See the [contribution guidelines](CONTRIBUTING.m
 
 ## License
 
-[![CC0](https://mirrors.creativecommons.org/presskit/buttons/88x31/svg/cc-zero.svg)](https://creativecommons.org/publicdomain/zero/1.0)
+[![CC BY 4.0](https://licensebuttons.net/l/by/4.0/88x31.png)](https://creativecommons.org/licenses/by/4.0/)
 
-To the extent possible under law, the contributors have waived all copyright and related or neighboring rights to this work.
+This work is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
