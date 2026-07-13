@@ -2,15 +2,37 @@
 
 [![Awesome](https://awesome.re/badge.svg)](https://awesome.re)
 
-A curated list of resources for building accountable, auditable, and trustworthy AI systems. From regulatory frameworks and open-source tooling to academic research and auditing methodology.
+## Why AI Accountability?
 
-Your contributions are welcome. See the [contribution guidelines](CONTRIBUTING.md) before opening a pull request.
+The AI infrastructure stack has layers. Most tooling targets the top layers. The accountability layer is where trust breaks.
+
+```
+┌──────────────────────────────────┐
+│ Applications                     │
+├──────────────────────────────────┤
+│ Agent Frameworks                 │
+│ LangGraph, CrewAI, AutoGen       │
+├──────────────────────────────────┤
+│ Communication                    │
+│ MCP, A2A                         │
+├──────────────────────────────────┤
+│ Accountability (this list)       │
+│ TAP, Truss, auditing, governance │
+├──────────────────────────────────┤
+│ Identity & Cryptography          │
+└──────────────────────────────────┘
+```
+
+This is a map of the accountability layer: protocols, implementations, regulations, research, and open problems.
+
+Contributions welcome. See the [contribution guidelines](CONTRIBUTING.md).
 
 ## Contents
 
 - [Definitions](#definitions)
-- [Frameworks & Standards](#frameworks--standards)
 - [Regulations & Policy](#regulations--policy)
+- [Frameworks & Standards](#frameworks--standards)
+- [Protocols & Specifications](#protocols--specifications)
 - [Organizations & Research Institutes](#organizations--research-institutes)
 - [Open-Source Tools](#open-source-tools)
 - [Academic Papers](#academic-papers)
@@ -20,6 +42,7 @@ Your contributions are welcome. See the [contribution guidelines](CONTRIBUTING.m
 - [Media & Community](#media--community)
 - [Conferences](#conferences)
 - [Auditing Methodology](#auditing-methodology)
+- [Open Problems](#open-problems)
 - [License](#license)
 
 ## Definitions
@@ -50,7 +73,18 @@ Your contributions are welcome. See the [contribution guidelines](CONTRIBUTING.m
 - [Council of Europe Framework Convention on AI](https://www.coe.int/en/web/artificial-intelligence/the-framework-convention-on-artificial-intelligence) - First international legally binding treaty on AI, ensuring consistency with human rights, democracy, and the rule of law.
 - [Deon — Ethics Checklist for Data Science](https://deon.drivendata.org) - Lightweight command-line tool and checklist prompting ethical reflection across the data science project lifecycle.
 - [Data Nutrition Project](https://datanutrition.org) - Methodology and labeling system for datasets inspired by nutrition labels, making quality, provenance, and biases visible at a glance.
+
+## Protocols & Specifications
+
+Protocols and specifications that define how accountability is encoded, transmitted, and verified across system boundaries. Separated from frameworks because specs are concrete wire formats, not governance guidance.
+
 - [TAP (Tensflare Accountability Protocol)](https://github.com/tensflare/tap) - Open protocol for cryptographically verifiable agent mandate encoding, action recording, and cross-boundary chain of custody.
+- [MCP (Model Context Protocol)](https://modelcontextprotocol.io) - Open protocol for standardized communication between AI agents and tools/servers; enables auditability of tool invocations.
+- [A2A (Agent-to-Agent Protocol)](https://github.com/google/A2A) - Google's open protocol for agent-to-agent communication with structured task and artifact exchange.
+- [IETF VAP/LAP Framework](https://datatracker.ietf.org/doc/draft-ailex-vap-legal-ai-provenance/) - Cryptographically verifiable decision audit trails for high-risk AI systems (hash-chain integrity, digital signatures).
+- [IETF SCITT](https://datatracker.ietf.org/wg/scitt/about/) - Supply Chain Integrity, Transparency, and Trust framework for verifiable artifact provenance.
+- [W3C Verifiable Credentials](https://www.w3.org/TR/vc-data-model-2.0/) - Standard for cryptographically verifiable attestations; applicable to agent identity and mandate credentials.
+- [OpenTelemetry](https://opentelemetry.io) - Observability framework for distributed tracing; applicable to agent action recording and audit trails.
 
 ## Regulations & Policy
 
@@ -482,6 +516,21 @@ Your contributions are welcome. See the [contribution guidelines](CONTRIBUTING.m
 - [TÜV AI Certification](https://www.tuv.com) - German technical inspection agencies developing certification for AI safety, bias, and regulatory compliance.
 - [ECP AI Certification](https://ecp.ai) - European certification scheme for AI GDPR compliance.
 - [Responsible AI Institute TrustX](https://www.responsible.ai) - AI system certification program aligned with 17 global standards.
+
+## Open Problems
+
+Accountable AI is not a solved problem. These are active research and engineering challenges with no consensus solution.
+
+- **Runtime accountability** — verifying agent behavior in real-time without blocking decisions.
+- **Cross-organization delegation** — maintaining audit trails when agents cross organizational boundaries with different trust domains.
+- **Legal provenance** — admissibility of AI-generated evidence in court; chain-of-custody standards for agent outputs.
+- **Machine-verifiable mandates** — formal languages for encoding what an agent is and is not allowed to do.
+- **Cross-border compliance** — satisfying multiple regulatory regimes (EU AI Act, Colorado AI Act, China, Brazil) simultaneously in a single agent system.
+- **AI evidence standards** — what constitutes admissible proof of agent behavior in regulatory and judicial contexts.
+- **Court admissibility** — Daubert standards applied to AI agent testimony and decision records.
+- **Accountability benchmarks** — standardized test suites for measuring and comparing accountability properties across platforms.
+- **Interoperable audit formats** — common schema for audit trails that works across agent frameworks, cloud providers, and jurisdictions.
+- **Principal attribution** — definitively linking agent actions back to the human or organization that authorized them.
 
 ## License
 
